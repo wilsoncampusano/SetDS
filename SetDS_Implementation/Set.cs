@@ -9,25 +9,25 @@ namespace SetDS_Implementation
     public class Set
     {
         public int Capacity { get; private set; }
-        private int[] elements ;
-        private int _collectionSize = 0;
+        private readonly int[] _elements ;
+        private readonly int _collectionSize ;
 
         public Set(int capacity)
         {
             _collectionSize = capacity;    
-            elements = new int[capacity];
+            _elements = new int[capacity];
         }
 
         public void Add(int value)
         {
-            if(!elements.Any(e=> value ==e ))
-                elements[Capacity] = value;
+            if(!_elements.Any((e) =>  value == e  ))
+                _elements[Capacity] = value;
                 Capacity++;
         }
 
         public int Get()
         {
-            return elements[--Capacity ];
+            return _elements[--Capacity];
         }
         
         public bool IsEmpty()

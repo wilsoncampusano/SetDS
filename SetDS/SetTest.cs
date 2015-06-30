@@ -8,18 +8,19 @@ namespace SetDS
     public class WithASet
     {
         [TestMethod]
-        public void ICanCreateOneWithACapacity()
+        public void CanCreateOneWithACapacity()
         {
-            var capacity = 10;
-            Set set = new Set(capacity);
+            Set set = new Set(1);
+
             Assert.IsNotNull(set);
         }
 
         [TestMethod]
         public void ICanAddAnElement_ThenICanGetItBack()
         {
-            var four = 4;
+            const int four = 4;
             var set = new Set(1);
+
             set.Add(four);
             Assert.AreEqual(four, set.Get());
         }
@@ -27,7 +28,7 @@ namespace SetDS
         [TestMethod]
         public void IfIAddOneElement_ThenItShouldBeNotEmpty()
         {
-            var four = 4;
+            const int four = 4;
             var set = new Set(1);
 
             Assert.IsTrue(set.IsEmpty());
@@ -36,10 +37,11 @@ namespace SetDS
         }
 
         [TestMethod]
-        public void ICanAddMoreThanOneElement()
+        public void CanAddMoreThanOneElement()
         {
-            var four = 4; 
-            var five = 5;
+            const int four = 4; 
+            const int five = 5;
+
             var set = new Set(2);
             
             set.Add(four);
@@ -49,10 +51,11 @@ namespace SetDS
         }
 
         [TestMethod]
-        public void IfIAddFiveFour_ThenIShoulbGetFourFive()
+        public void IfIAddFiveFour_ThenIShouldGetFourFive()
         {
-            var four = 4;
-            var five = 5;
+            const int four = 4;
+            const int five = 5;
+
             var set = new Set(2);
 
             set.Add(five);
@@ -62,7 +65,7 @@ namespace SetDS
         }
 
         [TestMethod]
-        public void ICanAddTheNumbersOfElementsSpecifiedInConstructor()
+        public void CanAddTheNumbersOfElementsSpecifiedInConstructor()
         {
             var set = new Set(5);
 
@@ -82,13 +85,19 @@ namespace SetDS
         [TestMethod]
         public void IfITryAddTheSameNumberManyTimes_ThenItShouldNotBeAdded()
         {
-            var four = 4;
-            var set = new Set(2);
+            const int four = 4;
+            var set = new Set(5);
 
+            set.Add(four);
+            set.Add(four);
+            set.Add(four);
             set.Add(four);
             set.Add(four);
 
             Assert.IsFalse(set.IsEmpty());
+            Assert.AreEqual(0, set.Get());
+            Assert.AreEqual(0, set.Get());
+            Assert.AreEqual(0, set.Get());
             Assert.AreEqual(0, set.Get());
             Assert.AreEqual(four, set.Get());
         }
