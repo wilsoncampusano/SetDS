@@ -12,7 +12,7 @@ namespace SetDS
         {
             var capacity = 10;
             Set set = new Set(capacity);
-            Assert.AreEqual(capacity, set.Capacity);
+            Assert.IsNotNull(set);
         }
 
         [TestMethod]
@@ -31,6 +31,29 @@ namespace SetDS
             var set = new Set(1);
 
             Assert.IsTrue(set.IsEmpty());
+            set.Add(four);
+            Assert.IsFalse(set.IsEmpty());
+        }
+
+        [TestMethod]
+        public void ICanAddMoreThanOneElement()
+        {
+            var four = 4; 
+            var five = 5;
+            var set = new Set(2);
+            
+            set.Add(four);
+            Assert.AreEqual(1, set.Capacity);
+            set.Add(five);
+            Assert.AreEqual(2, set.Capacity);
+        }
+
+        [TestMethod][Ignore]
+        public void IfITryAddTheSameNumberManyTimes_ThenItShouldNotAdded()
+        {
+            var four = 4;
+            var set = new Set(1);
+            set.Add(four);
             set.Add(four);
             Assert.IsFalse(set.IsEmpty());
         }

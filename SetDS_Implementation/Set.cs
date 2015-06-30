@@ -9,17 +9,18 @@ namespace SetDS_Implementation
     {
         public int Capacity { get; private set; }
         private int element;
-        private int _elementAdded=0;
+        private int _collectionSize=0;
 
         public Set(int capacity)
         {
-            Capacity = capacity;
+            _collectionSize = capacity;
+            
         }
 
         public void Add(int value)
         {
             element = value;
-            _elementAdded++;
+            Capacity++;
         }
 
         public int Get()
@@ -29,7 +30,7 @@ namespace SetDS_Implementation
 
         public bool IsEmpty()
         {
-            return !(Capacity == _elementAdded);
+            return Capacity != _collectionSize;
         }
     }
 }
