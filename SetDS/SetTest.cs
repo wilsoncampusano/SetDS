@@ -48,6 +48,19 @@ namespace SetDS
             Assert.AreEqual(2, set.Capacity);
         }
 
+        [TestMethod]
+        public void IfIAddFiveFour_ThenIShoulbGetFiveFour()
+        {
+            var four = 4;
+            var five = 5;
+            var set = new Set(2);
+
+            set.Add(five);
+            set.Add(four);
+            Assert.AreEqual(five, set.Get());
+            Assert.AreEqual(four, set.Get());
+        }
+
         [TestMethod][Ignore]
         public void IfITryAddTheSameNumberManyTimes_ThenItShouldNotAdded()
         {
