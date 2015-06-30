@@ -49,7 +49,7 @@ namespace SetDS
         }
 
         [TestMethod]
-        public void IfIAddFiveFour_ThenIShoulbGetFiveFour()
+        public void IfIAddFiveFour_ThenIShoulbGetFourFive()
         {
             var four = 4;
             var five = 5;
@@ -57,18 +57,45 @@ namespace SetDS
 
             set.Add(five);
             set.Add(four);
-            Assert.AreEqual(five, set.Get());
             Assert.AreEqual(four, set.Get());
+            Assert.AreEqual(five, set.Get());
         }
 
-        [TestMethod][Ignore]
+
+        [TestMethod]
+        public void ICanAddTheNumbersOfElementsSpecifiedInConstructor()
+        {
+
+            var set = new Set(5);
+
+            set.Add(1);
+            set.Add(2);
+            set.Add(3);
+            set.Add(4);
+            set.Add(5);
+
+            Assert.AreEqual(5, set.Get());
+            Assert.AreEqual(4, set.Get());
+            Assert.AreEqual(3, set.Get());
+            Assert.AreEqual(2, set.Get());
+            Assert.AreEqual(1, set.Get());
+
+          
+
+        }
+
+        [TestMethod]
         public void IfITryAddTheSameNumberManyTimes_ThenItShouldNotAdded()
         {
             var four = 4;
-            var set = new Set(1);
+            var set = new Set(2);
+
             set.Add(four);
             set.Add(four);
+
             Assert.IsFalse(set.IsEmpty());
+            Assert.AreEqual(four, set.Get());
+            Assert.AreEqual(0, set.Get());
         }
 
 
