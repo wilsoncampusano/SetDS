@@ -1,4 +1,7 @@
 SetDS/bin/*
 SetDS/obj/*
-SetDS/Properties
-TestResults/*
+SetDS/Properties/*
+TestResults/*
+SetDS_Implementation/bin/*
+SetDS_Implementation/obj/*
+SetDS_Implementation/Properties/*

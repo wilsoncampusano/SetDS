@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetDS", "SetDS\SetDS.csproj", "{597FCA28-C980-4505-B8B2-AA7F07624009}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetDS_Specs", "SetDS\SetDS_Specs.csproj", "{597FCA28-C980-4505-B8B2-AA7F07624009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetDS_Implementation", "SetDS_Implementation\SetDS_Implementation.csproj", "{50C87898-4B4B-487A-BBAC-57B599DAE231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{597FCA28-C980-4505-B8B2-AA7F07624009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{597FCA28-C980-4505-B8B2-AA7F07624009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{597FCA28-C980-4505-B8B2-AA7F07624009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C87898-4B4B-487A-BBAC-57B599DAE231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C87898-4B4B-487A-BBAC-57B599DAE231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C87898-4B4B-487A-BBAC-57B599DAE231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C87898-4B4B-487A-BBAC-57B599DAE231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
