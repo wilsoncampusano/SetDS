@@ -10,8 +10,7 @@ namespace SetDS_Implementation
     {
         public int Capacity { get; private set; }
         private int[] elements ;
-
-        private int _collectionSize=0;
+        private int _collectionSize = 0;
 
         public Set(int capacity)
         {
@@ -21,20 +20,14 @@ namespace SetDS_Implementation
 
         public void Add(int value)
         {
-            if (elements.Any(element => element  == value))
-                return;
-
-            elements[Capacity] = value;
-            Capacity++;
+            if(!elements.Any(e=> value ==e ))
+                elements[Capacity] = value;
+                Capacity++;
         }
 
         public int Get()
         {
-            if (Capacity < 0)
-                return -1;
-
-            return elements[--Capacity];
-
+            return elements[--Capacity ];
         }
         
         public bool IsEmpty()

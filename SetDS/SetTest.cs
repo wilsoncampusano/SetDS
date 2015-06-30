@@ -61,11 +61,9 @@ namespace SetDS
             Assert.AreEqual(five, set.Get());
         }
 
-
         [TestMethod]
         public void ICanAddTheNumbersOfElementsSpecifiedInConstructor()
         {
-
             var set = new Set(5);
 
             set.Add(1);
@@ -79,13 +77,10 @@ namespace SetDS
             Assert.AreEqual(3, set.Get());
             Assert.AreEqual(2, set.Get());
             Assert.AreEqual(1, set.Get());
-
-          
-
-        }
+       }
 
         [TestMethod]
-        public void IfITryAddTheSameNumberManyTimes_ThenItShouldNotAdded()
+        public void IfITryAddTheSameNumberManyTimes_ThenItShouldNotBeAdded()
         {
             var four = 4;
             var set = new Set(2);
@@ -94,10 +89,8 @@ namespace SetDS
             set.Add(four);
 
             Assert.IsFalse(set.IsEmpty());
-            Assert.AreEqual(four, set.Get());
             Assert.AreEqual(0, set.Get());
+            Assert.AreEqual(four, set.Get());
         }
-
-
     }
 }
