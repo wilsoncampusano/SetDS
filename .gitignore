@@ -1,0 +1,4 @@
+SetDS/bin/*
+SetDS/obj/*
+SetDS/Properties
+TestResults/*
