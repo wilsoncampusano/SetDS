@@ -9,23 +9,23 @@ namespace SetDS_Implementation
     public class Set
     {
         public int Capacity { get; private set; }
-        private readonly int[] _elements ;
+        private readonly IConvertible[] _elements ;
         private readonly int _collectionSize ;
 
         public Set(int capacity)
         {
             _collectionSize = capacity;    
-            _elements = new int[capacity];
+            _elements = new IConvertible[capacity];
         }
 
-        public void Add(int value)
+        public void Add(IConvertible value)
         {
-            if(!_elements.Any((e) =>  value == e  ))
+            if(!_elements.Any( value.Equals ))
                 _elements[Capacity] = value;
                 Capacity++;
         }
 
-        public int Get()
+        public IConvertible Get()
         {
             return _elements[--Capacity];
         }

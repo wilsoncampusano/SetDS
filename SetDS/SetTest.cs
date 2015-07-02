@@ -95,11 +95,36 @@ namespace SetDS
             set.Add(four);
 
             Assert.IsFalse(set.IsEmpty());
-            Assert.AreEqual(0, set.Get());
-            Assert.AreEqual(0, set.Get());
-            Assert.AreEqual(0, set.Get());
-            Assert.AreEqual(0, set.Get());
+            Assert.AreEqual(null, set.Get());
+            Assert.AreEqual(null, set.Get());
+            Assert.AreEqual(null, set.Get());
+            Assert.AreEqual(null, set.Get());
             Assert.AreEqual(four, set.Get());
         }
+
+        [TestMethod]
+        public void CanAddFloatNumbers()
+        {
+            const float four = 4.0f;
+            var set = new Set(1);
+            
+            set.Add(four);
+
+            Assert.IsFalse(set.IsEmpty());
+            Assert.AreEqual(4.0, (float)set.Get(), 0.01);
+        }
+
+        [TestMethod]
+        public void CanAddDoubleNumbers()
+        {
+            const double four = 4.00;
+            var set = new Set(1);
+
+            set.Add(four);
+
+            Assert.IsFalse(set.IsEmpty());
+            Assert.AreEqual(4.0, (double)set.Get(), 0.01);
+        }
+       
     }
 }
