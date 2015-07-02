@@ -105,25 +105,25 @@ namespace SetDS
         [TestMethod]
         public void CanAddFloatNumbers()
         {
-            const float four = 4.0f;
+            var four = 4.0f;
             var set = new Set(1);
             
             set.Add(four);
 
             Assert.IsFalse(set.IsEmpty());
-            Assert.AreEqual(4.0, (float)set.Get(), 0.01);
+            Assert.AreEqual(four, set.Get());
         }
 
         [TestMethod]
         public void CanAddDoubleNumbers()
         {
-            const double four = 4.00;
+            var four = 4.00;
             var set = new Set(1);
 
             set.Add(four);
 
             Assert.IsFalse(set.IsEmpty());
-            Assert.AreEqual(4.0, (double)set.Get(), 0.01);
+            Assert.AreEqual(four, set.Get());
         }
        
     }
